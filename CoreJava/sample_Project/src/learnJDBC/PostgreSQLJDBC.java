@@ -1,4 +1,4 @@
-package myPostgreSQL_package;
+package learnJDBC;
 import java.sql.Connection;
 import java.sql.DriverManager;
 

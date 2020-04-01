@@ -1,4 +1,4 @@
-package infosys;
+package collectionsDemo;
 
 import java.util.ArrayList;
 import java.util.List;
