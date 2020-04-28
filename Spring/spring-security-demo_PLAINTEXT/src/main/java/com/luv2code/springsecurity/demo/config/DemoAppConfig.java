@@ -17,6 +17,12 @@ import org.springframework.web.servlet.view.InternalResourceViewResolver;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
 
+/**
+ * @author Robin
+ * this project contains
+ * Spring Security demo + jdbc connection + exception handling using access denied page
+ *
+ */
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackages="com.luv2code.springsecurity.demo")
