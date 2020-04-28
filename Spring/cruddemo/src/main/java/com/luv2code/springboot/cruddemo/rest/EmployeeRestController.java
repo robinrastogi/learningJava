@@ -15,6 +15,11 @@ import org.springframework.web.bind.annotation.RestController;
 import com.luv2code.springboot.cruddemo.entity.Employee;
 import com.luv2code.springboot.cruddemo.service.EmployeeService;
 
+/**
+ * @author Robin
+ * simple spring rest based application to get json responses from database
+ *
+ */
 @RestController
 @RequestMapping("/api")
 public class EmployeeRestController {
