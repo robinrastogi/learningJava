@@ -2,6 +2,8 @@ package com.luv2code.springdemo.controller;
 
 import java.util.List;
 
+import javax.servlet.ServletConfig;
+import javax.servlet.ServletContext;
 import javax.validation.Valid;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,6 +25,12 @@ import com.luv2code.springdemo.service.CustomerService;
 @Controller
 @RequestMapping("/customer")
 public class CustomerController {
+	
+	@Autowired
+	ServletContext servletContext;
+	
+	@Autowired
+	ServletConfig servletConfig;
 	
 	// add an initbinder ... to convert trim input strings
 		// remove leading and trailing whitespace
