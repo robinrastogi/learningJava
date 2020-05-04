@@ -13,6 +13,10 @@
 	<link type="text/css"
 		  rel="stylesheet"
 		  href="${pageContext.request.contextPath}/resources/css/add-customer-style.css">
+		  
+	<style>
+		.error {color:red}
+	</style>
 </head>
 
 <body>
@@ -36,6 +40,7 @@
 					<tr>
 						<td><label>First name:</label></td>
 						<td><form:input path="firstName" /></td>
+						<td><form:errors path="firstName" cssClass="error" /></td>
 					</tr>
 				
 					<tr>
