@@ -5,6 +5,15 @@ import org.springframework.context.annotation.AnnotationConfigApplicationContext
 import com.luv2code.aopdemo.dao.AccountDAO;
 import com.luv2code.aopdemo.dao.MembershipDAO;
 
+/**
+ * @author Robin
+ * 
+    Aspect: a class that implements cross-cutting concerns, such as transaction management
+    Advice: the methods that get executed when a specific JoinPoint with matching Pointcut is reached in the application
+    Pointcut: a set of regular expressions that are matched with JoinPoint to determine whether Advice needs to be executed or not
+    JoinPoint: a point during the execution of a program, such as the execution of a method or the handling of an exception
+
+ */
 public class MainDemoApp {
 
 	public static void main(String[] args) {
