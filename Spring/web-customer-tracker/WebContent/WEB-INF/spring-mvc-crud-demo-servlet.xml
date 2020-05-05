@@ -66,6 +66,17 @@
 	<!-- Add support for reading web resources: css, images, js, etc ... -->
 	<mvc:resources location="/resources/" mapping="/resources/**"></mvc:resources>
 	
+	<!-- Configuring interceptors based on URI -->
+	<mvc:interceptors>
+			<bean class="com.luv2code.springdemo.controller.RequestProcessingTimeInterceptor"></bean>
+	</mvc:interceptors>
+	
+	<!-- <mvc:interceptors>
+		<mvc:interceptor>
+			<mvc:mapping path="/list" />
+			<bean class="com.luv2code.springdemo.controller.RequestProcessingTimeInterceptor"></bean>
+		</mvc:interceptor>
+	</mvc:interceptors> -->
 	
 	
 </beans>
