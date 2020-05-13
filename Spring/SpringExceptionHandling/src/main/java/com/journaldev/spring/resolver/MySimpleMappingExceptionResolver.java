@@ -4,6 +4,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.web.servlet.handler.SimpleMappingExceptionResolver;
 
+
 public class MySimpleMappingExceptionResolver extends
 		SimpleMappingExceptionResolver {
 
