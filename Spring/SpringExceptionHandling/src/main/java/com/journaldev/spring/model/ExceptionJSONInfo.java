@@ -4,6 +4,7 @@ public class ExceptionJSONInfo {
 
 	private String url;
 	private String message;
+	private String stackTrace;
 	
 	public String getUrl() {
 		return url;
@@ -16,5 +17,11 @@ public class ExceptionJSONInfo {
 	}
 	public void setMessage(String message) {
 		this.message = message;
+	}
+	public String getStackTrace() {
+		return stackTrace;
+	}
+	public void setStackTrace(String stackTrace) {
+		this.stackTrace = stackTrace;
 	}
 }

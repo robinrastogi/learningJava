@@ -17,6 +17,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.ModelAndView;
 
 import com.journaldev.spring.exceptions.EmployeeNotFoundException;
+import com.journaldev.spring.exceptions.EmployeeNotFoundExceptionWithJSONResponse;
 import com.journaldev.spring.model.Employee;
 import com.journaldev.spring.model.ExceptionJSONInfo;
 
@@ -30,6 +31,8 @@ public class EmployeeController {
 		//deliberately throwing different types of exception
 		if(id==1){
 			throw new EmployeeNotFoundException(id);
+		}else if(id==11){
+			throw new EmployeeNotFoundExceptionWithJSONResponse(id);
 		}else if(id==2){
 			throw new SQLException("SQLException, id="+id);
 		}else if(id==3){
@@ -48,8 +51,8 @@ public class EmployeeController {
 	
 	@ExceptionHandler(EmployeeNotFoundException.class)
 	public ModelAndView handleEmployeeNotFoundException(HttpServletRequest request, Exception ex){
-		logger.error("Requested URL="+request.getRequestURL());
-		logger.error("Exception Raised="+ex);
+		logger.error("Requested URL = "+request.getRequestURL());
+		logger.error("Exception Raised = "+ex);
 		
 		ModelAndView modelAndView = new ModelAndView();
 	    modelAndView.addObject("exception", ex);
@@ -57,6 +60,17 @@ public class EmployeeController {
 	    
 	    modelAndView.setViewName("error");
 	    return modelAndView;
+	}
+	
+	@ExceptionHandler(EmployeeNotFoundExceptionWithJSONResponse.class)
+	public @ResponseBody ExceptionJSONInfo handleEmployeeNotFoundExceptionWithJSONResponse(HttpServletRequest request, Exception ex){
+		
+		ExceptionJSONInfo response = new ExceptionJSONInfo();
+		response.setUrl(request.getRequestURL().toString());
+		response.setMessage(ex.getMessage());
+		response.setStackTrace(ex.getStackTrace()[0].toString());
+		
+		return response;
 	}
 	
 //	@ExceptionHandler(EmployeeNotFoundException.class)
