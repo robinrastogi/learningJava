@@ -4,6 +4,11 @@
 <!doctype html>
 <html lang="en">
 
+<!-- spring mvc form:form tag provides automatic support for security defences like csrf 
+		spring security filters provides synchronized security pattern which includes 
+		a session cookie and a randomly generated token for each request.
+		for request processing spring security verifies token before processing.
+		-->
 <head>
 	
 	<title>Login Page</title>

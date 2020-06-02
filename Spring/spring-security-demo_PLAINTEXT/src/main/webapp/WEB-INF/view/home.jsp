@@ -32,7 +32,7 @@
 			<a href="${pageContext.request.contextPath}/systems">IT Systems Meeting</a>
 			(Only for Admin peeps)
 	</p>
-	<%-- <security:authorize access="hasRole('MANAGER')">
+	<security:authorize access="hasRole('MANAGER')">
 	
 		<!-- Add a link to point to /leaders ... this is for the managers -->
 		
@@ -53,7 +53,7 @@
 			(Only for Admin peeps)
 		</p>
 	
-	</security:authorize> --%>
+	</security:authorize>
 	
 	<hr>
 	
