@@ -11,6 +11,13 @@ import org.springframework.stereotype.Repository;
 
 import com.luv2code.springboot.cruddemo.entity.Employee;
 
+/**
+ * @author Robin
+ * Here EntityManager from Java Presistent API (JPA) is used instead of Hibernate.
+ * By having a standard API, you're not locked to verndor's implementation.
+ * Hence maintenance for portable and flexible code is possible and also the vendor implementation can be switched if required.
+ * 
+ */
 @Repository
 public class EmployeeDAOHibernateImpl implements EmployeeDAO {
 
