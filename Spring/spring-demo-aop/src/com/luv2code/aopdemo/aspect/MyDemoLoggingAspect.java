@@ -30,7 +30,7 @@ public class MyDemoLoggingAspect {
 		
 		// print out method we are advising on
 		String method = theProceedingJoinPoint.getSignature().toShortString();
-		myLogger.info("\n=====>>> Executing @Around on method: " + method);
+		myLogger.info("\n=====>>> Order(2) = Executing @Around on method: " + method);
 		
 		// get begin timestamp
 		long begin = System.currentTimeMillis();
@@ -55,7 +55,7 @@ public class MyDemoLoggingAspect {
 		
 		// print out which method we are advising on
 		String method = theJoinPoint.getSignature().toShortString();
-		myLogger.info("\n=====>>> Executing @After (finally) on method: " 
+		myLogger.info("\n=====>>> Order(2) = Executing @After (finally) on method: " 
 							+ method);
 	
 	}
@@ -70,7 +70,7 @@ public class MyDemoLoggingAspect {
 		
 		// print out which method we are advising on
 		String method = theJoinPoint.getSignature().toShortString();
-		myLogger.info("\n=====>>> Executing @AfterThrowing on method: " + method);
+		myLogger.info("\n=====>>> Order(2) = Executing @AfterThrowing on method: " + method);
 		
 		// log the exception
 		myLogger.info("\n=====>>> The exception is: " + theExc);
@@ -89,7 +89,7 @@ public class MyDemoLoggingAspect {
 		
 		// print out which method we are advising on 
 		String method = theJoinPoint.getSignature().toShortString();
-		myLogger.info("\n=====>>> Executing @AfterReturning on method: " + method);
+		myLogger.info("\n=====>>> Order(2) = Executing @AfterReturning on method: " + method);
 				
 		// print out the results of the method call
 		myLogger.info("\n=====>>> result is: " + result);
@@ -130,7 +130,7 @@ public class MyDemoLoggingAspect {
 	@Before("com.luv2code.aopdemo.aspect.LuvAopExpressions.forDaoPackageNoGetterSetter()")
 	public void beforeAddAccountAdvice(JoinPoint theJoinPoint) {
 		
-		myLogger.info("\n=====>>> Executing @Before advice on method");	
+		myLogger.info("\n=====>>> Order(2) = Executing @Before advice on method");	
 		
 		// display the method signature
 		MethodSignature methodSig = (MethodSignature) theJoinPoint.getSignature();
@@ -144,7 +144,7 @@ public class MyDemoLoggingAspect {
 		
 		// loop thru args
 		for (Object tempArg : args) {
-			myLogger.info(tempArg.toString());
+			myLogger.info("args: " + tempArg.toString());
 			
 			if (tempArg instanceof Account) {
 				

@@ -31,7 +31,7 @@ public class AfterFinallyDemoApp {
 		}
 		
 		// display the accounts
-		System.out.println("\n\nMain Program: AfterThrowingDemoApp");
+		System.out.println("\n\nMain Program: AfterFinallyDemoApp");
 		System.out.println("----");
 		
 		System.out.println(theAccounts);
