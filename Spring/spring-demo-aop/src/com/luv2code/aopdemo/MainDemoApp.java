@@ -12,6 +12,8 @@ import com.luv2code.aopdemo.dao.MembershipDAO;
     Advice: the methods that get executed when a specific JoinPoint with matching Pointcut is reached in the application
     Pointcut: a set of regular expressions that are matched with JoinPoint to determine whether Advice needs to be executed or not
     JoinPoint: a point during the execution of a program, such as the execution of a method or the handling of an exception
+    AOP proxy: an object created by the AOP framework in order to implement the aspect contracts (advise method executions and so on). 
+    	In the Spring Framework, an AOP proxy will be a JDK dynamic proxy or a CGLIB proxy.
 
  */
 public class MainDemoApp {
